@@ -1,12 +1,11 @@
 package org.acme;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "Fruits.findAll", query = "SELECT f FROM Fruit f ODER BY f.name", hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
 @Table(name = "known_fruits")
+@Cacheable
 public class Fruit {
 
     @Id

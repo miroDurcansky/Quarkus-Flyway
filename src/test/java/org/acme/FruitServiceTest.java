@@ -1,13 +1,11 @@
 package org.acme;
 
-import io.quarkus.test.junit.QuarkusIntegrationTest;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @QuarkusTest
 public class FruitServiceTest {
@@ -16,7 +14,7 @@ public class FruitServiceTest {
     FruitService fruitService;
 
     @Test
-    public void saveFruit(){
+    public void saveFruit() {
         Fruit fruit = new Fruit();
         fruit.setId(2);
         fruit.setName("Banana");
@@ -25,7 +23,6 @@ public class FruitServiceTest {
 
         assertEquals("Banana", savedFruit.getName());
         assertEquals(2, savedFruit.getId());
-
     }
 }
 
