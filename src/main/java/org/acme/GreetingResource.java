@@ -12,21 +12,9 @@ import javax.ws.rs.core.MediaType;
 @Path("/hello")
 public class GreetingResource {
 
-//    @Inject
-//    EntityManager entityManager;
-
     @GET
-//    @Transactional
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-//        Fruit fruit = new Fruit();
-//        fruit.setId(2);
-//        fruit.setName("mangooooo");
-//
-//        entityManager.persist(fruit);
-//
-//        Fruit savedFruit = entityManager.find(Fruit.class, 1);
-
         return "Hello from RESTEasy Reactive";
     }
 }
